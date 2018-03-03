@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: false
+  vars_files:
+    - website_vars.yml
+  tasks:
+  - template:
+      src: html_template.j2
+      dest: /tmp/hello_world.html
